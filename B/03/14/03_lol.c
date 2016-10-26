@@ -1,30 +1,21 @@
-
-
-
-
 #include "stdio.h"
-
 
 int main() {
 
-  int n, m, k,sum=0,otstypka=0;
-scanf("%d",&n);
-scanf("%d",&m);
-scanf("%d",&k);
-
-for (int i = 0; i < n; i+=k)
-{
+  int n,m,k,q,p,i;
+  q=0;
+  p=0;
+  
+  scanf("%d",&n);
+  scanf("%d",&m);
+  scanf("%d",&k);
+  for (i=0;i<n;i+=k)
+  {
   if(i>=k){
-
-    otstypka += 0.02*m;
+  p+=0.02*m;
   }
-
-    sum = k*(m - otstypka)+sum;
-
-}
-
-printf("%d",sum);
-
-
-return 0;
+  q=k*(m-p)+q;
+  }
+  printf("%d",q);
+  return 0;
 }
